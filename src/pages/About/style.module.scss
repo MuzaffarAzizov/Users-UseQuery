@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo&display=swap");
+$fontFirst: "Inter", sans-serif;
+$fontSecond: "Cardo", serif;
+@mixin h2 {
+  font-family: $fontSecond;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 50px;
+  text-transform: capitalize;
+  color: #1b3764;
+}
+@mixin p {
+  font-family: $fontFirst;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #b4c7e7;
+}
+@mixin hr {
+  background: #ffca42;
+  width: 35px;
+  height: 3px;
+  border: none;
+}
+@mixin button {
+  font-family: $fontSecond;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  letter-spacing: 0.57px;
+  text-transform: capitalize;
+  color: #1b3764;
+}
+@mixin number {
+  font-family: $fontSecond;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 77px;
+  color: #1b3764;
+}
+@mixin h6 {
+  font-family: $fontFirst;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  color: #969aa0;
+}
+@mixin qrcode {
+  font-family: $fontSecond;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffca42;
+}
+.about {
+  display: flex;
+  justify-content: space-around;
+  background: #f5f8fc;
+  padding: 5% 0;
+  .about__text {
+    h2 {
+      @include h2;
+    }
+    hr {
+      @include hr;
+      margin: 5% 0;
+    }
+    p {
+      @include button;
+      font-family: $fontFirst;
+      line-height: 34px;
+      text-transform: none;
+      color: #969aa0;
+      letter-spacing: 0;
+    }
+    .numbers {
+      display: flex;
+      margin: 5% 0;
+      gap: 5%;
+      align-items: center;
+      .number {
+        @include number;
+        h6 {
+          @include h6;
+        }
+      }
+      hr {
+        height: 98px;
+        width: 2px;
+      }
+    }
+    .qrcode {
+      background: #1b3764;
+      display: flex;
+      gap: 5%;
+      align-items: center;
+      .qrcode__text {
+        h4 {
+          @include qrcode;
+        }
+        h5 {
+          @include p;
+          margin: 5% 0;
+        }
+      }
+      img {
+        margin: 5%;
+      }
+    }
+  }
+  .about__img {
+    width: 50%;
+  }
+}

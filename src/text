@@ -1,0 +1,43 @@
+All users
+https://jsonplaceholder.typicode.com/users
+
+All todos related to single user
+https://jsonplaceholder.typicode.com/users/1/todos
+
+All posts related to single user
+https://jsonplaceholder.typicode.com/users/1/posts
+
+All Alboms related to single user
+https://jsonplaceholder.typicode.com/users/1/albums
+
+All Photos related to single albom
+https://jsonplaceholder.typicode.com/albums/1/photos
+PAGES:
+home => antd dan slayderlar brnmalar iwlatib ui yasaw kerak
+
+about => about us 1 2ta static datalar
+
+users => xamma userlarni cardlari
+
+single user => 3ta accardion posts, todos, alboms related to single user
+
+single post => comments related to single post
+
+single albom => photos related to single albom
+
+register => register qlganda contextga yoziw kerak
+
+login => login qlganda contextda bror usern datasiga togr kelsa protected route larni ociwi kerak
+
+P.S 2ta context iwlatsa boladi 1tasi register qlngan userlarni saqlaydgan arrray 2csi login qlsa owa arrayni icidan togr keladgan usern datalarini saqlaydgan object
+
+must have :
+
+campanentlarga bolib props orqali beriw kerak ozgaradgan malumotlarn
+
+Layoutga orab iwlatiw kerak
+
+navbarda login yoki register link cqb turadi agar login qlmagan bosa login qlgandan keyn ularn orniga login qlngan usern name i cqb turadi
+
+Optional:
+Darkmode
