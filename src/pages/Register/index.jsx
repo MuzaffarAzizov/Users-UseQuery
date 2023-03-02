@@ -1,7 +1,6 @@
-import u from "./style.module.scss";
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import AuthContext, { useAuth } from "../../utils/AuthContext";
+import AuthContext from "../../utils/AuthContext";
 
 export const Register = () => {
   const [username, setUsername] = useState("");

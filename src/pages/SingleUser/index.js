@@ -1,7 +1,7 @@
 import { instance } from "../../utils/axiosInstance";
 import { Tabs } from "antd";
 import { useState, useEffect } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import s from "./style.module.scss";
 import { Button } from "antd";
 export const SingleUser = () => {
@@ -10,7 +10,6 @@ export const SingleUser = () => {
   const [albums, setAlbums] = useState([{}]);
   const [photos, setPhotos] = useState([{}]);
   const { id } = useParams();
-  const nav = useNavigate();
   console.log(id, "id");
   useEffect(() => {
     instance.get(`/users/${id}`).then((res) => setUsers(res.data));

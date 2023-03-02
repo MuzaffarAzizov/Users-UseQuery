@@ -1,6 +1,6 @@
 import u from "./style.module.scss";
 import { useState, useContext } from "react";
-import AuthContext, { useAuth } from "../../utils/AuthContext";
+import AuthContext from "../../utils/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
@@ -8,14 +8,13 @@ export const Login = () => {
   const [password, setPassword] = useState("");
   const { user, setUser } = useContext(AuthContext);
   const nav = useNavigate();
-  const userHandle = () => {
-    nav(`/users`);
-    setUser(true);
-  };
+  // const userHandle = () => {
+  //   nav(`/users`);
+  //   setUser(true);
+  // };
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("login successful");
-    // user.map(item)=>(item.username===username && item.password === password ? userHandle():console.log('error'));
     if (user.username === username && user.password === password) {
       nav(`/users`);
       setUser(true);
